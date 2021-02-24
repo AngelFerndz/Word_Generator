@@ -3,10 +3,26 @@
     <title>Word Generator</title>
   </head>
   <body>
+    <center>
+      <h1>Word Generator</h1>
+      <div id='word'></div>
+    </center>
     <script>
-      //place code here
-    </script>
-    <h1>Word Generator</h1>
-    <div id='word'></div>
+      function random(min, max) {
+         Math.floor((Math.random() * max) + min);
+      }
+      
+      function get_vowel() {
+        var vowels = "a e i o u";
+        var res = vowels.split(" ");
+        return res[random(0, res.length)];
+      }
+      
+      function set_word(word) {
+        document.getElementById("demo").innerHTML = word;
+      }
+      
+      set_word("potato");
+    </script> 
   </body>
 </html>
